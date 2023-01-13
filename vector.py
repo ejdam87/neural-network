@@ -14,6 +14,9 @@ class Vector:
         for e in self.data:
             yield e
 
+    def __len__( self ) -> int:
+        return len( self.data )
+
     def operation( self, other: "Vector", op: Callable[ [ T, T ], T ] ) -> "Vector":
         res = []
         for a, b in zip( self, other ):
